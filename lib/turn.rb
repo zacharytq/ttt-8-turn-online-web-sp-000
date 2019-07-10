@@ -1,11 +1,17 @@
-def display_board(state)
-  line_1 = " #{state[0]} | #{state[1]} | #{state[2]} "
-  line_2 = " #{state[3]} | #{state[4]} | #{state[5]} "
-  line_3 = " #{state[6]} | #{state[7]} | #{state[8]} "
-  seperators = "-----------"
-  puts line_1
-  puts seperators
-  puts line_2
-  puts seperators
-  puts line_3
+def display_board(board)
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
+  puts "-----------"
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts "-----------"
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+end
+
+# code your input_to_index and move method here!
+
+def input_to_index(user_input)
+  user_input.to_i - 1
+end
+
+def move(board, position, char = "X")
+  board[position] = char
 end
